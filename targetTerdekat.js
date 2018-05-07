@@ -21,7 +21,16 @@ for(var b=0; b < x.length; b++){
   hasil.push(hitung)
 }
 
-hasil.sort(function(value1, value2) { return value1 > value2 });
+for(var c=0; c < hasil.length; c++){
+
+  for(var d=0; d < hasil.length; d++){
+    if(hasil[c] < hasil[d]){
+      var temp = hasil[d]
+      hasil[d] = hasil[c]
+      hasil[c] = temp
+    }
+  }
+}
 akhir = hasil[0]
 
 return akhir;
